@@ -79,6 +79,14 @@
         </div>
 
     </div>
-    <script src="src/app.js"></script>
+    <script>
+        class Global{
+            constructor(){
+                this.document = document; 
+            }
+        }
+        let global = new Global();
+    </script>
+    <script src="./src/app.js"></script>
 </body>
 </html>

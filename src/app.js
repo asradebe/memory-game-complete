@@ -1,24 +1,24 @@
 // cards array holds all cards
-let card = document.getElementsByClassName("card");
+let card = global.document.getElementsByClassName("card");
 let cards = [...card];
 
 // deck of all cards in game
-const deck = document.getElementById("card-deck");
+const deck = global.document.getElementById("card-deck");
 
 // declaring variable of matchedCards
-let matchedCard = document.getElementsByClassName("match");
+let matchedCard = global.document.getElementsByClassName("match");
 
 // close icon in modal
-let closeIcon = document.querySelector(".close");
+let closeIcon = global.document.querySelector(".close");
 
 // declare modal
-let modal = document.getElementById("popup1");
+let modal = global.document.getElementById("popup1");
 
 // array for opened cards
 let openedCards = [];
 
 //Fisher-Yates shuffles cards method. 
-function shuffle(arr) {
+function shuffle(arr){
     let newPos, temp;
     for(let i = arr.length - 1; i > 0; i--) {
         newPos = Math.floor(Math.random() * (i+1));
@@ -31,7 +31,6 @@ function shuffle(arr) {
 
 //function to start a new play
 function startGame() {
-
     // empty the openCards array
     openedCards = [];
 
